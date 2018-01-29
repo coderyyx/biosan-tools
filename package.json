@@ -1,18 +1,92 @@
 {
-  "name": "bs-tools",
+  "name": "biosan-tools",
   "version": "0.0.1",
-  "description": "rc",
-  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "bin": {
+    "biosan-tools": "./bin/biosan-tools.js",
+    "biosan-tools-run": "./bin/biosan-tools-run.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.25.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "chalk": "^2.1.0",
+    "colorful": "^2.1.0",
+    "commander": "^2.9.0",
+    "css-loader": "^0.28.7",
+    "deep-assign": "^2.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "gh-pages": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-strip-code": "^0.1.4",
+    "gulp-typescript": "^3.1.6",
+    "gulp-watch": "^4.3.10",
+    "jsonml.js": "^0.1.0",
+    "less": "^2.7.2",
+    "less-plugin-npm-import": "^2.1.0",
+    "mark-twain": "^2.0.2",
+    "merge2": "^1.2.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "object-assign": "~4.1.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "postcss": "^6.0.12",
+    "postcss-loader": "^2.0.6",
+    "rimraf": "^2.6.1",
+    "rucksack-css": "^1.0.2",
+    "through2": "^2.0.1",
+    "ts-jest": "^21.0.1",
+    "ts-loader": "^3.0.3",
+    "tslint": "^5.3.2",
+    "tslint-eslint-rules": "^4.1.0",
+    "tslint-react": "^3.0.0",
+    "webpack": "^3.6.0"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "pre-commit": "1.x"
+  },
+  "keywords": [
+    "react",
+    "tools"
+  ],
+  "peerDependencies": {
+    "typescript": "^2.2.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib",
+    "postinstall": "node lib/init.js",
+    "pub": "git push origin && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coderyyx/biosan-tools.git"
   },
-  "keywords": [
-    "rc"
-  ],
   "author": "yyx",
   "license": "MIT",
   "bugs": {
