@@ -81,7 +81,7 @@
   "scripts": {
     "lint": "eslint lib",
     "postinstall": "node lib/init.js",
-    "pub": "git push origin && npm publish"
+    "pub": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
