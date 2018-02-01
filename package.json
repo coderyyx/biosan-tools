@@ -81,7 +81,7 @@
   "scripts": {
     "lint": "eslint lib",
     "postinstall": "node lib/init.js",
-    "pub": "git add . && git commit -m 'publish' && git push && npm version patch && npm publish"
+    "pub": "npm config set registry https://registry.npmjs.org && git add . && git commit -m 'publish' && git push && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
